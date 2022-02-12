@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using CustomAttributes;
 
 namespace Shapes
@@ -10,6 +8,8 @@ namespace Shapes
     {
         [SerializeField] 
         private Transform _transform;
+        [SerializeField] 
+        private CircleCollider2D _collider2D;
         [SerializeField] [Range (1, 20)]
         private int _size;
         
@@ -33,6 +33,8 @@ namespace Shapes
             IApplicable applicableShape = shape.GetComponent<IApplicable>();
             if(applicableShape == null) return;
             applicableShape.Apply(this);
+
+            _collider2D.enabled = false;
         }
     }
 }

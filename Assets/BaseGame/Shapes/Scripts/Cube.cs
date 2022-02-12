@@ -1,15 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using CustomAttributes;
+using Player;
 
 namespace Shapes
 {
     [RequireComponent (typeof(BoxCollider2D))]
-    public class Cube : Shape, IApplicable, IMeasurable
+    public class Cube : Shape, IApplicable, IMeasurable, IMovable
     {
+        public event CounterEvent MovesHappened;
         [SerializeField] 
         private Transform _transform;
+        [SerializeField] 
+        private BoxCollider2D _collider2D;
         [SerializeField] [Range (1, 20)] 
         private int _size;
         
@@ -29,6 +31,8 @@ namespace Shapes
         public void Apply(Shape shape)
         {
             _transform.position = shape.transform.position;
+            MovesHappened.Invoke();
+            _collider2D.enabled = false;
         }        
     }
 }

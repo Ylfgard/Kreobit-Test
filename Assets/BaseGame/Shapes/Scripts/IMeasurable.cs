@@ -1,4 +1,7 @@
-﻿public interface IMeasurable
+﻿namespace Shapes
 {
-    int Size {get;}
+    public interface IMeasurable
+    {
+        int Size {get;}
+    }
 }
