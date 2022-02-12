@@ -1,4 +1,7 @@
-﻿public interface IInteractable
+﻿namespace Shapes
 {
-    void Interact();
+    public interface IInteractable
+    {
+        void Interact(Shape shape);
+    }
 }

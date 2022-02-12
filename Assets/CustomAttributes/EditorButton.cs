@@ -7,7 +7,7 @@ namespace CustomAttributes
 {
     [CustomEditor(typeof(Object), true, isFallback = false)]
     [CanEditMultipleObjects]
-    public class ButtonEditor : Editor
+    public class EditorButton : Editor
     {
         public override void OnInspectorGUI()
         {

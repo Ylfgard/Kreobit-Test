@@ -6,7 +6,7 @@ using CustomAttributes;
 namespace Shapes
 {
     [RequireComponent (typeof(BoxCollider2D))]
-    public class Cube : Shape, IApplicable, ISelectable, IMeasurable
+    public class Cube : Shape, IApplicable, IMeasurable
     {
         [SerializeField] 
         private Transform _transform;
@@ -14,26 +14,21 @@ namespace Shapes
         private int _size;
         
         public int Size => _size;
-
-        public void SetSize(int size)
-        {
-
-        }
-
+        
         [EditorButton ("Change size")]
         public void ChangeScale()
         {
             _transform.localScale = Vector3.one * _size;
         }
 
-        public void Select()
+        private void Start()
         {
-
+            ChangeScale();
         }
 
-        public void Apply()
+        public void Apply(Shape shape)
         {
-
+            _transform.position = shape.transform.position;
         }        
     }
 }
