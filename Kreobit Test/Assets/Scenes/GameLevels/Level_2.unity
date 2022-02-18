@@ -188,6 +188,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelTemplate
       objectReference: {fileID: 0}
+    - target: {fileID: 267402063191487384, guid: 9f97ba6cd7455ce4fac211445b7cd41f,
+        type: 3}
+      propertyPath: test
+      value: 
+      objectReference: {fileID: 8843300956281469804, guid: 238f3fe1c3e91f349b72e69be28dcf7f,
+        type: 3}
+    - target: {fileID: 267402063191487384, guid: 9f97ba6cd7455ce4fac211445b7cd41f,
+        type: 3}
+      propertyPath: test2
+      value: 
+      objectReference: {fileID: 229789515785801789, guid: ea8e12af417e0d64ba0faef64732ea19,
+        type: 3}
+    - target: {fileID: 267402063191487386, guid: 9f97ba6cd7455ce4fac211445b7cd41f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f97ba6cd7455ce4fac211445b7cd41f, type: 3}
 --- !u!4 &184256535 stripped
