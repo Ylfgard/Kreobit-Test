@@ -8,7 +8,7 @@ namespace BaseGame.LevelMenu
         [SerializeField]
         private GameObject _windowLevelMenu;
         [SerializeField]
-        private Object[] scenes;
+        private string[] _scenes;
 
         private void Start()
         {
@@ -17,12 +17,17 @@ namespace BaseGame.LevelMenu
 
         public void LoadLevel(int index)
         {
-            SceneManager.LoadScene(scenes[index].name);
+            SceneManager.LoadScene(_scenes[index]);
         }
 
         public void ChangeMenuState(bool state)
         {
             _windowLevelMenu.SetActive(state);
+        }
+
+        public void ExitGame()
+        {
+            Application.Quit();
         }
     }
 }
