@@ -20,7 +20,6 @@ namespace InputSystem
                     if(c2d == null)  _inputHandler.InputEmpty();
                     else _inputHandler.InputObject(c2d.gameObject);
                 }
-                
             }
         }
     }
