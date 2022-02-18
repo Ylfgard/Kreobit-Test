@@ -5,12 +5,15 @@ namespace InputSystem
     public class MobileInputDetector : MonoBehaviour
     {
         [SerializeField]
+        private GameObject test;
+        [SerializeField]
         private InputHandler _inputHandler;
 
         void Update()
         {
             if(Input.touchCount > 0)
             {
+                Instantiate(test, transform.position, Quaternion.identity);
                 Touch touch = Input.GetTouch(0); 
                 if(touch.phase != TouchPhase.Began) return;
 
