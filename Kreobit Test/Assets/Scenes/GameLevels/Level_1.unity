@@ -668,10 +668,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 229789515785801789, guid: ea8e12af417e0d64ba0faef64732ea19,
         type: 3}
-    - target: {fileID: 267402063191487386, guid: 9f97ba6cd7455ce4fac211445b7cd41f,
+    - target: {fileID: 267402063191487385, guid: 9f97ba6cd7455ce4fac211445b7cd41f,
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 267402063191487386, guid: 9f97ba6cd7455ce4fac211445b7cd41f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f97ba6cd7455ce4fac211445b7cd41f, type: 3}

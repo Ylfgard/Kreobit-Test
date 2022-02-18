@@ -5,11 +5,6 @@ namespace InputSystem
 {
     public class InputHandler : MonoBehaviour
     {
-        
-        [SerializeField]
-        private GameObject test;
-        [SerializeField]
-        private GameObject test2;
         private Shape _selectedShape;
 
         public void InputObject(GameObject inputObject)
@@ -37,13 +32,11 @@ namespace InputSystem
         private void SelectShape(Shape selectShape)
         {
             _selectedShape = selectShape;
-            Instantiate(test, selectShape.transform.position, Quaternion.identity);
             _selectedShape.SelectShape();
         }
 
         private void UnselectShape()
         {
-            Instantiate(test2, _selectedShape.transform.position, Quaternion.identity);
             _selectedShape.UnselectShape();
             _selectedShape = null;
         }
